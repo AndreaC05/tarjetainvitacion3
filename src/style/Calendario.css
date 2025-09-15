@@ -1,0 +1,165 @@
+.container_calendario {
+    max-width: 400px;
+    margin: 20px auto;
+    /* padding: 20px; */
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container_calendario h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Miama';
+  font-size: 50px;
+  background: linear-gradient(90deg, #2063b6, #d351a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Para navegadores que lo soporten */
+  color: transparent;
+}
+
+
+.calensario_dias_headers {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+/* Glow animado alrededor */
+.calensario_dias_headers .animado_square {
+  position: absolute;
+  display: block;
+}
+
+.calensario_dias_headers .animado_square:nth-child(1) {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #2768b8, #d66aaf, #fff);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+  0% { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+.calensario_dias_headers .animado_square:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #2768b8, #d66aaf, #fff);
+  animation: animate2 2s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+  0% { top: -100%; }
+  50%, 100% { top: 100%; }
+}
+
+.calensario_dias_headers .animado_square:nth-child(3) {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(270deg, transparent, #2768b8, #d66aaf, #fff);
+  animation: animate3 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate3 {
+  0% { right: -100%; }
+  50%, 100% { right: 100%; }
+}
+
+.calensario_dias_headers .animado_square:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #2768b8, #d66aaf, #fff);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1.5s;
+}
+
+@keyframes animate4 {
+  0% { bottom: -100%; }
+  50%, 100% { bottom: 100%; }
+}
+
+.calendario_headers,
+.calendario_dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.header_dia {
+    text-align: center;
+    font-weight: bold;
+    color: #000000;
+    font-family: 'Miama';
+    font-size: 26px;
+}
+
+.dia {
+    position: relative;
+    width: 37px;
+    padding-top: 100%;
+    overflow: hidden;
+    font-family: "Inspiration", cursive;
+    /* border: 1px solid black; */
+    height: 60px;
+}
+
+.dia_vacio {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dia_activo {
+    cursor: pointer;
+}
+
+.numero_dia {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1;
+    color: #000000;
+}
+
+.icono_especial.imagen_osito {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* encima del número */
+  opacity: 0.8; /* Corregido: era "o.8" */
+  pointer-events: none;
+}
+
+.icono_especial.imagen_osito img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: rotacion 2s linear infinite; /* Rotación continua */
+}
+
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

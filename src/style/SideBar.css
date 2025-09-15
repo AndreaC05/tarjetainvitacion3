@@ -1,0 +1,62 @@
+/* Tu clase del sidebar */
+.sidebar_regalos {
+  background: url("https://res.cloudinary.com/dnao6nouz/image/upload/v1757947302/image_20_h9ensd.png")
+    no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Apuntar al contenedor interno de PrimeReact Sidebar */
+.sidebar_regalos .p-sidebar-content {
+  overflow-y: scroll; /* mantiene el scroll funcional */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge antiguo */
+}
+
+.sidebar_regalos .p-sidebar-content::-webkit-scrollbar {
+  width: 0; /* Chrome, Safari, Opera */
+  background: transparent;
+}
+
+.sidebar_regalos h2 {
+  font-family: "Inspiration", cursive;
+  font-size: 45px;
+}
+
+.sidebar_regalos h3 {
+  font-family: "Miama";
+  font-size: 35px;
+}
+
+.sidebar_regalos ul li {
+  font-family: "Miama";
+  font-weight: 700;
+  background: linear-gradient(90deg, #2063b6, #d351a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Para navegadores que lo soporten */
+  color: transparent;
+  font-size: 30px;
+}
+
+.codigo_vestimenta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.codigo_vestimenta p {
+  font-family: "Miama";
+  font-weight: 700;
+  font-size: 40px;
+  width: 300px;
+  text-align: center;
+  background: linear-gradient(90deg, #2063b6, #d351a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* Para navegadores que lo soporten */
+  color: transparent;
+}
