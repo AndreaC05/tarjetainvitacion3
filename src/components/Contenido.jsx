@@ -15,7 +15,7 @@ export default function Contenido() {
 
   // 👇 añadimos vestimenta
   const [visibleSections, setVisibleSections] = useState({
-    musica:false,
+    musica: false,
     calendario: false,
     hora: false,
     botones: false,
@@ -84,9 +84,11 @@ export default function Contenido() {
         </p>
       </div>
 
-      <section className={`container_musica mt-5 slide-up-section ${
+      <section
+        className={`container_musica mt-5 slide-up-section ${
           visibleSections.musica ? "visible" : ""
-        }`}>
+        }`}
+      >
         <Musica />
       </section>
 
@@ -176,7 +178,50 @@ export default function Contenido() {
             onHide={() => setVisible(false)}
           >
             <h2>Lista de Regalos</h2>
-            {/* ... tu lista de regalos ... */}
+            <h3>Ropita de bebé</h3>
+            <ul>
+              <li>Bodies (0 a 6 meses, manga corta y larga)</li>
+              <li>Gorritos y guantecitos</li>
+              <li>Calcetines o zapatitos de algodón</li>
+              <li>Mamelucos/pijamitas</li>
+            </ul>
+
+            <h3>Descanso y comodidad</h3>
+            <ul>
+              <li>Mantas o cobijitas suaves</li>
+              <li>Almohadita para lactancia</li>
+              <li>Cojines antirreflujo</li>
+            </ul>
+
+            <h3>Alimentación</h3>
+            <ul>
+              <li>Biberones (de diferentes tamaños)</li>
+              <li>Chupetes</li>
+              <li>Esterilizador o cepillo para biberones</li>
+              <li>Baberos</li>
+            </ul>
+
+            <h3>Higiene y cuidado</h3>
+            <ul>
+              <li>Pañales (desechables o ecológicos)</li>
+              <li>Toallitas húmedas</li>
+              <li>Cremita para rozaduras</li>
+              <li>Shampoo/jabón neutro para bebé</li>
+            </ul>
+
+            <h3>Juguetes y estimulación</h3>
+            <ul>
+              <li>Sonajeros</li>
+              <li>Mordederas</li>
+              <li>Libros de tela o juguetes sensoriales</li>
+            </ul>
+
+            <h3>Prácticos para papás</h3>
+            <ul>
+              <li>Mochila o pañalera</li>
+              <li>Canguro/portabebé</li>
+              <li>Termo para agua</li>
+            </ul>
           </Sidebar>
         </div>
       </section>
